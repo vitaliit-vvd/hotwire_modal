@@ -22,3 +22,6 @@ Metrics/ClassLength:
   Enabled: false
 Lint/NoReturnInBeginEndBlocks:
   Enabled: false
+Lint/MissingSuper:
+  Enabled: false
+
