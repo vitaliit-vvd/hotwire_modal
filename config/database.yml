@@ -1,0 +1,23 @@
+# PostgreSQL. Versions 9.3 and up are supported.
+#
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  username: postgres
+  password: postgres
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+
+development:
+  <<: *default
+  database: hotwire_modal_development
+
+test:
+  <<: *default
+  database: hotwire_modal_test
+
+production:
+  <<: *default
+  database: hotwire_modal_production
+  username: hotwire_modal
+  password: <%= ENV["HOTWIRE_MODAL_DATABASE_PASSWORD"] %>
+  
